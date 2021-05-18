@@ -234,6 +234,17 @@ class _CanvasPaintingState extends State<CanvasPainting> {
             });
           }),
 
+      FloatingActionButton(
+        heroTag: "color_pink",
+        child: Icon(Icons.edit_attributes_outlined),
+        tooltip: 'Color',
+        onPressed: () {
+          setState(() {
+            selectedColor = Colors.white;
+          });
+        },
+      ),
+
       //FAB for picking red color
       FloatingActionButton(
         backgroundColor: Colors.white,
@@ -263,12 +274,12 @@ class _CanvasPaintingState extends State<CanvasPainting> {
       //FAB for picking pink color
       FloatingActionButton(
         backgroundColor: Colors.white,
-        heroTag: "color_pink",
-        child: colorMenuItem(Colors.pink),
+        heroTag: "color_yellow",
+        child: colorMenuItem(Colors.yellow),
         tooltip: 'Color',
         onPressed: () {
           setState(() {
-            selectedColor = Colors.pink;
+            selectedColor = Colors.yellow;
           });
         },
       ),
